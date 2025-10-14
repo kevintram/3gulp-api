@@ -32,6 +32,10 @@ class Settings(BaseSettings):
             path=self.DB_NAME,
         )
 
+    WORKOS_API_KEY: str
+    WORKOS_CLIENT_ID: str
+    WORKOS_COOKIE_PASSWORD: str
+
     CORS_ALLOWED_ORIGINS: Annotated[
         list[AnyUrl] | str, BeforeValidator(parse_origins)
     ] = []
